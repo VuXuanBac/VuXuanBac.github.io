@@ -1,5 +1,5 @@
 ---
-title: Welcome to my page
+title: Hello
 draft: false
 date: 2024-03-05
 ---
@@ -12,5 +12,3 @@ Chào mừng bạn đến với trang blog của mình 😋.
 - 🌾 [Today I Learn](til) 🐿 chứa những bài viết nhỏ về những kiến thức, kỹ thuật mình học hỏi được.
 
 🎧 Một số dự án cá nhân của mình
-
-- 💰 [Ứng dụng quản lý chi tiêu](project/expense-management.md) 🐧

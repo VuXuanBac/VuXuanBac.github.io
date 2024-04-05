@@ -1,9 +1,10 @@
 ---
   title:  Expense Management
-  draft: false
+  draft: true
   date: 2024-03-20
   tags:
     - project
+    - ror
   description: RoR project for an expense management
 ---
 
@@ -44,7 +45,7 @@ Vì đây là một ứng dụng cá nhân nên mình rất hào hứng phát tr
 
 Dưới đây là những tính năng đã và đang được tích hợp vào ứng dụng
 
-### 🍪 Tại sao lại là <span style="font-weight: bold; color: orange;">Coin Stack</span>?
+### 🍪 Tại sao lại là Coin Stack?
 
 ### 📞 Tôi cần liên hệ với ai?
 
