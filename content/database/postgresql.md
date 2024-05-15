@@ -1,7 +1,7 @@
 ---
 title: PostgreSQL
-draft: true
-date: 2024-03-{3:13}
+draft: false
+date: 2024-03-13
 tags:
   - database
 description: PostgreSQL

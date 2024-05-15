@@ -1,6 +1,6 @@
 ---
-  title:  Git and Github
-  draft: true
+  title:  Git
+  draft: false
   date: 2024-05-14
   tags:
     - git
@@ -68,5 +68,6 @@ git remote remove <name>
 ```
 
 Những thay đổi trên repository cục bộ sẽ không tự động đồng bộ lên các remote repositories. Tức là thường sẽ có sự khác biệt giữa chúng, có thể là do _thay đổi tại repository cục bộ_ hoặc _thay đổi từ remote repository_ (khi được cập nhật từ một repository cục bộ khác, ví dụ, ở máy khác). Do đó, quá trình đồng bộ thường có 2 thao tác:
+
 - **`git pull`** hoặc **`git fetch`**: Kéo dữ liệu từ remote repository về local repository.
 - **`git push`**: Đẩy dữ liệu từ local repository lên remote repository.
