@@ -9,7 +9,7 @@
   description: What is WebSockets? What is WebHooks? When to use them?
 ---
 
-> 🐆 Điều gì đứng phía sau các tính năng cần cập nhật thời gian thực trong các ứng dụng ? 🥰
+> 🐆 **Điều gì đứng phía sau các tính năng cần cập nhật thời gian thực trong các ứng dụng ?** 🥰
 
 🎈 Những tính năng như chat, notifications,... quá phổ biến trong các ứng dụng, và để phát triển các tính năng này, ta cần các kỹ thuật xử lý thời gian thực - **realtime**, tức là khi có dữ liệu mới, dữ liệu này được gửi về cho các bên liên quan trong thời gian đủ nhỏ để không ảnh hưởng đến trải nghiệm người dùng.
 

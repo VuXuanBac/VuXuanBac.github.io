@@ -9,7 +9,9 @@
   aliases: 
 ---
 
-> 🐯 Một số Hosting Server, với mục đích bảo vệ, thiết lập cấu hình chặn các cổng của dịch vụ gửi mail (như 25, 587, 465,...), vậy cần giải quyết như thế nào? 🙂
+### ⚡ Vấn đề
+
+> 🐯 **Một số Hosting Server, với mục đích bảo vệ, thiết lập cấu hình chặn các cổng của dịch vụ gửi mail (như 25, 587, 465,...), vậy cần giải quyết như thế nào ?** 🙂
 
 🎈 Sau khi thử deploy một ứng dụng Rails lên Hosting Server (trong [bài này](til/deploy-rails-to-render.md)), mình phát hiện rằng nền tảng này **chặn** các cổng gửi email.
 
@@ -17,7 +19,7 @@
 
 Trong số các nền tảng cung cấp tính năng này, mình thấy có [MailerSend](https://www.mailersend.com/) là ít chặt chẽ trong vấn đề đăng ký tài khoản (so với [SendGrid](https://sendgrid.com/en-us) - không hiểu sao các yêu cầu tạo tài khoản đều bị từ chối).
 
-### 📬 Mailsend with Rails
+### 📬 Sử dụng Mailsend trong Rails
 
 Để đơn giản, mình sử dụng một SDK trên Ruby giúp tương tác với API của Mailsend (thay vì dùng code Ruby để tạo Request)
 
@@ -55,7 +57,7 @@ end
 
 🎈 Đến đây, chức năng gửi mail đã hoàn thành, tuy nhiên vẫn chưa phải là linh động, việc gửi mail vẫn phải gọi thủ công method `send`. Vì thế, mình đi tìm cách tích hợp nó vào **ActionMailer**, hỗ trợ sẵn trong Rails.
 
-### 🖇 REST API and ActionMailer
+### 🖇 Liên kết REST API vừa tạo với ActionMailer
 
 Trong cấu hình cho ActionMailer, ta có thể xác định một trong các giá trị `smtp`, `sendmail`, `file` và `test` cho
 
@@ -69,7 +71,7 @@ Mình tìm được một câu trả lời rất quý giá trên [Stackoverflow]
 
 Vì thế, mình triển khai lại code như sau:
 
-- Tạo một tệp trong `initializers` để thêm một `delivery_method` vào **`ActionMailer::Base`**
+1️⃣ Tạo một tệp trong `initializers` để thêm một `delivery_method` vào **`ActionMailer::Base`**
 
 ```ruby
 # config/initializers/mail_sender.rb
@@ -98,7 +100,7 @@ end
 ActionMailer::Base.add_delivery_method :restapi, MailSender
 ```
 
-- `MailSender` lúc này đóng vai trò là một delivery method cho `ActionMail::Base`, và nó cần override lại method `deliver!`, với đối số là một [**`Mail::Message`** object](https://www.rubydoc.info/github/mikel/mail/Mail/Message)
+2️⃣ `MailSender` lúc này đóng vai trò là một delivery method cho `ActionMail::Base`, và nó cần override lại method `deliver!`, với đối số là một [**`Mail::Message`** object](https://www.rubydoc.info/github/mikel/mail/Mail/Message)
 
 Sau khi khai báo một delivery method tên là `:restapi` và ánh xạ tới Class `MailSender`, ta đi cấu hình
 
@@ -111,4 +113,8 @@ config.action_mailer.restapi_settings = {
 }
 ```
 
-> [!note] > [Resend](https://resend.com/overview) cũng là một sự lựa chọn tốt, với slogan **_Resend is the email API for developers._**. Gói miễn phí của nền tảng này có thể gửi tối đa 100 emails/ngày
+### 🪝Tham khảo
+
+> [!note]
+>
+> [Resend](https://resend.com/overview) cũng là một sự lựa chọn tốt, với slogan **_Resend is the email API for developers._**. Gói miễn phí của nền tảng này có thể gửi tối đa 100 emails/ngày

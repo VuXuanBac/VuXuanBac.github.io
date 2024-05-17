@@ -10,7 +10,7 @@
   aliases:
 ---
 
-#### ⚡ Vấn đề
+### ⚡ Vấn đề
 
 > 🪿 **Hôm nay mình đã thử kết hợp cả Docker và Virtual Machine để giảm thiểu lượng dependencies phải cài đặt vào máy Host cho dự án.** 😌
 
@@ -25,7 +25,7 @@ Không có lý do gì cho sự kết hợp này cả 😁, và như thế mình 
 
 Hãy bắt đầu thiết lập môi trường
 
-#### 🚚 Virtual Machine - RoR
+### 🚚 Virtual Machine - RoR
 
 💰 Để quản lý Ruby version, mình sử dụng **rbenv**
 
@@ -87,7 +87,7 @@ ibus restart
 
 Sau đó vào Settings -> Region & Language -> Input Sources để thêm một ngôn ngữ. Lựa chọn **Vietnamese (Unikey)**
 
-#### 🐳 Docker - PostgreSQL
+### 🐳 Docker - PostgreSQL
 
 📁 Trên máy Host (Windows), mình tạo thư mục để chứa các tệp liên quan cần cho Project
 
@@ -119,11 +119,11 @@ volumes:
 - Postgres kết nối qua cổng **5432** nên cần mở một cổng trên Host (ở đây là 5432) và ánh xạ nó tới cổng này.
 - Tạo một Volume `pgdata` để chứa dữ liệu DB sinh ra từ Postgres.
 
-#### 🔗 Connect them
+### 🔗 Connect them
 
 ✨Đây là phần thú vị nhất của bài này - **Kết nối Docker với Virtual Machine**
 
-##### 🪐 Virtual Machine Networking
+#### 🪐 Virtual Machine Networking
 
 Trước hết, mình sẽ nói qua một số cách kết nối từ Virtual Machine ra môi trường bên ngoài.
 
@@ -154,7 +154,7 @@ Nếu bạn không muốn hiểu về cách thức chúng hoạt động, bảng
 > - Có thể sử dụng Bridge, nhưng mode này quá rộng, cho phép cả kết nối từ LAN.
 > - Do đó, chế độ hợp lý là **Host-only**
 
-🔧 **Cấu hình cho Host-only Network**
+#### 🔧 Cấu hình cho Host-only Network
 
 - Ảnh dưới đây là cấu hình cho adapter trên Host cho mạng này.
   ![Config Host Adapter](assets/til/vm-host-only-adapter.png)
@@ -165,7 +165,7 @@ Nếu bạn không muốn hiểu về cách thức chúng hoạt động, bảng
 - Kiểm tra địa chỉ IP trên VM tại cổng mạng tương ứng. VD: Cổng mạng mở trên VirtualBox là cổng thứ 3 thì cổng mạng trên VM có thể là _enp0s9_ - (thứ tự là 3,8,9,10)
 - Hiện tại, IP được cấp cho VM của mình là **192.168.1.17**
 
-✅ **Kiểm tra kết nối**
+#### ✅ Kiểm tra kết nối
 
 - Để kiểm tra kết nối, thông thường sử dụng hai lệnh
 
@@ -180,7 +180,7 @@ telnet <ip_addr> <port>
 - Thông thường, kết nối từ Host sang VM thông, song chiều ngược lại thì không.
 - Lý do là vì Host (ở đây là Windows) đang có Firewall Rule chặn kết nối. Do đó, cần tạo một Rule mới (không nên tắt Firewall)
 
-📏 **Thêm Rule cho Firewall/iptables**
+#### 📏 Thêm Rule cho Firewall/iptables
 
 Để kết nối từ VM tới cổng 5432 trên Host (đã mở để kết nối tới Postgres), thêm Rule sau cho Host
 
@@ -194,7 +194,7 @@ telnet <ip_addr> <port>
 | Local Port     | **5432**                                |
 | Remote Port    | Any                                     |
 
-#### 🚀 Run
+### 🚀 Run
 
 Khác với môi trường thông thường, Postgres và RoR ở đây nằm trên hai máy khác nhau, ta cần chỉ định lại **connectionString** trong tệp **config/database.yml**
 
@@ -237,7 +237,7 @@ export POSTGRES_PORT="5432" % Host Port
 
 📬 Cuối cùng, hãy chạy Postgres Container và chạy thử `rails db:create` để kiểm tra kết quả.
 
-#### 🪝Tham khảo
+### 🪝Tham khảo
 
 - [DigitalOcean - Install RoR](https://www.digitalocean.com/community/tutorials/how-to-install-ruby-on-rails-with-rbenv-on-ubuntu-20-04)
 - [Docker - Postgres](https://www.docker.com/blog/how-to-use-the-postgres-docker-official-image/)

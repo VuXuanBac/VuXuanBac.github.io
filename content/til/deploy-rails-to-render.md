@@ -8,7 +8,9 @@
     - til
 ---
 
-> 🦝 Sau khi đã có một ứng dụng chạy ổn định, tại sao không thử chạy nó trên nền tảng web thực sự ? 😉
+### ⚡ Thử nghiệm
+
+> 🦝 **Sau khi đã có một ứng dụng chạy ổn định, tại sao không thử chạy nó trên nền tảng web thực sự ?** 😉
 
 🎈[Render](https://render.com/) cung cấp nền tảng để deploy web app, từ **static sites** đến **dynamic web apps** và hỗ trợ nhiều **frameworks** khác nhau như RoR (Ruby), Express (Node.js), Django (Python),.... Ngoài ra, Render cũng cung cấp các services khác như: Background workers, Cron jobs, Data stores (PostgreSQL, Redis).
 
@@ -16,7 +18,7 @@
 
 Mình đã thử nghiệm chạy một ứng dụng web trên Render với một DB server và một RoR web app.
 
-#### 🐘 PostgreSQL
+### 🐘 PostgreSQL
 
 Render hỗ trợ tốt nhất với PostgreSQL. Việc tạo một PostgreSQL instance tương đối dễ dàng, như [hướng dẫn](https://docs.render.com/databases)
 
@@ -30,9 +32,10 @@ Rõ ràng, nếu kết nối là Internal thì thời gian trễ truy cập càn
 Ở đây, ứng dụng web sẽ chạy cùng server với DB. Ta sẽ lưu lại địa chỉ Internal URL của DB vừa tạo.
 
 > [!note]
+>
 > Gói Render Free sẽ xóa DB instance sau 90 ngày.
 
-#### 🍅 RoR Web App
+### 🍅 Tạo một ứng dụng Web
 
 Ta sẽ tạo một RoR app sử dụng PostgreSQL.
 
@@ -42,7 +45,7 @@ rails new <appname> --database=postgresql
 
 Khi đã code và đẩy lên Github Repository, ta có thể tạo một Web service instance trên Render trỏ đến repository đó.
 
-Chú ý một số cấu hình sau:
+### 🛠 Cấu hình cho ứng dụng
 
 - Thêm hai biến môi trường:
   - **RAILS_MASTER_KEY**: Copy từ **_config/master.key_**.
