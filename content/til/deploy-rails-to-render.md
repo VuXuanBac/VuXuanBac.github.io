@@ -5,7 +5,6 @@
   tags: 
     - deploy
     - ror
-    - til
 ---
 
 ### ⚡ Thử nghiệm

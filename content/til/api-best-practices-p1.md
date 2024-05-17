@@ -4,7 +4,6 @@
   date: 2024-05-17
   tags:
     - api
-    - til
     - series-api-best-practices
   description: Take notes some best practices for writing API [P1 - Design]
 ---

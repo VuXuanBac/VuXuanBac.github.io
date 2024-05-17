@@ -5,7 +5,6 @@
   tags: 
     - vscode
     - tool
-    - til
   description: How to create a snippets in Visual Studio Code
   aliases:
 ---

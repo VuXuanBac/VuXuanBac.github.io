@@ -3,7 +3,6 @@
   draft: false
   date: 2024-03-21
   tags:
-    - til
     - service
     - realtime
   description: What is WebSockets? What is WebHooks? When to use them?

@@ -5,7 +5,6 @@
   tags:
     - quartz
     - tool
-    - til
 ---
 
 ### ⚡ Vấn đề

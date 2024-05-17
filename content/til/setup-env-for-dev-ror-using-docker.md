@@ -4,7 +4,6 @@
   date: 2024-03-09
   tags:
     - ror
-    - til
     - system
   description: Want an environment for developing RoR with Docker?
   aliases:
