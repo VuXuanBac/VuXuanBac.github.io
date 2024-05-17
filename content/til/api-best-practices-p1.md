@@ -18,7 +18,9 @@ Dưới đây là một số lời khuyên và ghi chú mình học được t�
 
 1️⃣ **Sử dụng dữ liệu riêng cho các môi trường khác nhau: Development, Staging, Production**
 
-Dữ liệu có thể sinh ngẫu nhiên song vẫn cần phù hợp với định dạng của nó, ví dụ một email, số điện thoại,.... [Faker](https://github.com/fzaninotto/Faker) là một thư viện quá nổi tiếng cho mục đích này.
+Dữ liệu có thể sinh ngẫu nhiên song vẫn cần phù hợp với định dạng của nó, ví dụ email, số điện thoại,....
+
+[Faker](https://github.com/fzaninotto/Faker) là một thư viện quá nổi tiếng cho mục đích này.
 
 2️⃣ **Xóa dữ liệu của các bảng có thể thất bại vì các ràng buộc toàn vẹn, đặc biệt là FKs**
 
@@ -154,11 +156,11 @@ Mã phản hồi (_status code_) giúp client xác định nhanh kết quả x�
 | 4xx  | Yêu cầu từ client không hợp lệ và không nên gửi lại yêu cầu mà không có sự thay đổi                                                      |
 | 5xx  | Một số lỗi tại server khiến yêu cầu không được xử lý như lỗi kết nối tới DB hoặc quá tải. Client có thể thử lại sau một khoảng thời gian |
 
-**Danh sách các mã phản hồi**: [Tham khảo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+Danh sách các mã phản hồi: [Tham khảo](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
 1️⃣ **Nên có thêm thông tin về lỗi cùng với mã phản hồi**
 
-Có nhiều trường hợp lỗi cùng trả về một mã phản hồi, vì chúng cùng thuộc một nhóm các lỗi có liên quan đến nhau. Ví dụ như các lỗi về đăng nhập có thể do nhiều nguyên nhân như:
+Thường xuyên xảy ra trường hợp nhiều lỗi cùng trả về một mã phản hồi, vì chúng cùng thuộc một nhóm các lỗi có liên quan đến nhau. Ví dụ như các lỗi về đăng nhập có thể do nhiều nguyên nhân như:
 
 - Tài khoản hoặc mật khẩu không đúng
 - Tài khoản bị khóa
@@ -171,15 +173,11 @@ Ví dụ khác là mã phản hồi `404: Not Found` thường bị lạm dụng
 - Tài nguyên hiện chưa phù hợp để hiển thị
 - Bạn không có quyền đọc với tài nguyên
 
-Do đó, nếu ứng dụng muốn thông báo cho người dùng về nguyên nhân gây lỗi, cần sử dụng thêm một số trường thông tin:
-
-- `errorType`: Kiểu lỗi, ví dụ: lỗi liên quan đến OAuth.
-- `errorCode`: Mã lỗi, cụ thể hóa ý nghĩa của từng lỗi.
-- `errorMessage`: Phản hồi chi tiết về lỗi, human-readable.
+Do đó, nếu ứng dụng muốn thông báo cho người dùng về nguyên nhân gây lỗi, cần sử dụng thêm một số trường thông tin.
 
 2️⃣ **Trường dữ liệu cần thiết cho lỗi**
 
-Có một số cách để lựa chọn cách tổ chức dữ liệu cho các lỗi
+Có một số cách để lựa chọn cách tổ chức dữ liệu cho các lỗi.
 
 1. [**JSON-API**](https://jsonapi.org/format/#errors)
 

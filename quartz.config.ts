@@ -21,8 +21,8 @@ const config: QuartzConfig = {
     theme: {
       cdnCaching: true,
       typography: {
-        header: "Kode Mono", //Kode Mono, Madimi One
-        body: "Fira Sans", //
+        header: "Lobster", //Kode Mono, Madimi One
+        body: "Chakra Petch", //Libre Franklin
         code: "Chivo Mono",
       },
       colors: {
