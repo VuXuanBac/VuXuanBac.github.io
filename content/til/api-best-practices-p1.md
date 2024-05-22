@@ -96,7 +96,7 @@ Cả hai định dạng này cũng làm mất kiểu của các trường dữ l
 1. [**JSON-API**](http://jsonapi.org/format/)
 2. **Twitter-style**
 
-```JS
+```js
 // single resource
 {
     "name": "Hulk Hogan",
@@ -118,7 +118,7 @@ Cả hai định dạng này cũng làm mất kiểu của các trường dữ l
 
 3. **Facebook-style**
 
-```JS
+```js
 // single resource
 {
     "name": "Hulk Hogan",
