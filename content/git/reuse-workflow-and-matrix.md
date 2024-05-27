@@ -8,10 +8,6 @@
   description: How to reuse jobs defined in one workflow in another? How to run one jobs many times with different inputs?
 ---
 
-Tham khảo:
-
-- [Ứng dụng giúp kiểm tra cú pháp của workflow](https://rhysd.github.io/actionlint/)
-
 Reusable workflow cho phép tách một workflow ra các phần nhỏ giúp dễ bảo trì và có thể dùng lại. Một workflow có thể gọi một reused workflow (_called workflow_) từ cùng repository hoặc từ một repository có thể truy cập được.
 
 Phạm vi truy cập các đối tượng ở hai workflows này như sau:

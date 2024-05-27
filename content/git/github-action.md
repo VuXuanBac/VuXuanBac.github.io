@@ -232,7 +232,7 @@ Secrets là các biến được định nghĩa bên trong organization và repo
 
 Bên trong workflow, secret có thể sử dụng trong một biến môi trường (`env`) hoặc inputs cho các actions (`with`). Các biến trong secrets có thể truy cập qua **`secrets`** context.
 
-###	🎫 GITHUB_TOKEN
+### 🎫 GITHUB_TOKEN
 
 GITHUB_TOKEN là một access token đặc biệt được sinh tự động để GitHub Action có thể truy cập các dịch vụ của GitHub. Mỗi khi GitHub Action job chạy, GitHub thực hiện sinh một token mới và gán cho biến `secrets.GITHUB_TOKEN`. Khi job thực thi xong (hoặc sau 24 giờ), token này sẽ hết hạn.
 
@@ -260,3 +260,7 @@ permissions:
   security-events: read|write|none
   statuses: read|write|none
 ```
+
+## 🪝Tham khảo
+
+- [Ứng dụng giúp kiểm tra cú pháp của workflow](https://rhysd.github.io/actionlint/)
