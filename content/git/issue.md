@@ -3,7 +3,6 @@
   draft: false
   date: 2024-05-21
   tags:
-    - git
     - github
     - project-management
   description: A solution for work tracking

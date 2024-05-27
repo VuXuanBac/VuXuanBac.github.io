@@ -3,7 +3,6 @@
   draft: false
   date: 2024-05-15
   tags:
-    - git
     - github
     - project-management
   description: How to create and customize Pull Request on GitHub

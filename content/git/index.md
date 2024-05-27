@@ -1,5 +1,5 @@
 ---
   title:  Git & GitHub
   draft: false
-  description: Notes on Git and some useful functionalities on GitHub
+  description: Notes on Git and some useful functionalities of GitHub
 ---

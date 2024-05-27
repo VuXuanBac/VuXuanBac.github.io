@@ -3,7 +3,6 @@
   draft: false
   date: 2024-05-22
   tags:
-    - git
     - github
   description: What is Fork?
 ---
