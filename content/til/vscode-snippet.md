@@ -11,7 +11,7 @@
 
 ### ⚡ Vấn đề
 
-> 🐺 **Nếu quá chán với việc lặp lại các nội dung khi viết trên Visual Studio Code, hãy thử Snippets? ** 😙
+> 🐺 **Nếu quá chán với việc lặp lại các nội dung khi viết trên Visual Studio Code, hãy thử Snippets?** 😙
 
 🎈 **Snippets** là khuôn mẫu cho một đoạn text tự động được chèn vào editor khi có lệnh.
 

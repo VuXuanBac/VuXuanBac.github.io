@@ -1,5 +1,5 @@
 ---
-  title:  API Best Practices [Part 1]
+  title:  API Best Practices
   draft: false
   date: 2024-05-17
   tags:

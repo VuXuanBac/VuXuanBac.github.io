@@ -107,7 +107,7 @@ Dữ liệu của biến môi trường có thể truy cập qua:
 > - Ở các phạm vi khác chỉ có thể sử dụng cú pháp thứ nhất, và chúng sẽ được xử lý bởi GitHub Action.
 > - Vì GitHub Action xử lý trước runner nên có thể sử dụng Context bên trong **`run`**
 
-### 🍪 Biến môi trường mặc định
+### 🍩 Biến môi trường mặc định
 
 Đây là các biến môi trường được tạo và gán giá trị bởi GitHub, **chỉ có phạm vi bên trong runner (tức là chia sẻ giữa các steps)** và **hầu hết không thể thay đổi giá trị**.
 
@@ -240,6 +240,10 @@ GITHUB_TOKEN là một access token đặc biệt được sinh tự động đ�
 >
 > Có thể truy cập GITHUB_TOKEN qua biến **`github.token`**
 
+> [!note]
+>
+> `GITHUB_ACTION` là tự động sinh bởi GitHub, nên các tác vụ sử dụng Token này sẽ hiển thị người thực hiện là **GitHub Bot**, nếu muốn hiển thị bạn là người thực hiện, hãy sinh Personal Access Token và gán cho các tác vụ cần Token.
+
 Mặc định, GITHUB_TOKEN được cấp những quyền sau: [GITHUB_TOKEN permissions](https://docs.github.com/en/actions/security-guides/automatic-token-authentication#permissions-for-the-github_token)
 
 Ta nên giới hạn các quyền này xuống tối thiểu bằng việc khai báo `permissions` cho workflow hoặc job.
@@ -261,6 +265,15 @@ permissions:
   statuses: read|write|none
 ```
 
+### 🌱 Các cách xác thực khác
+
+`GITHUB_TOKEN` chỉ có các quyền truy cập tài nguyên bên trong **repository**, nên để thao tác với các tài nguyên bên ngoài (như project hoặc repository khác), cần có **Personal Access Token** (thật) hoặc **GitHub App ID** (khuyến khích đối với _Organization Project_, vì Token này gắn với tổ chức thay vì cá nhân) để cấp quyền cho GitHub Action.
+
+**🪝Tham khảo**:
+
+- [Xác thực với GitHub App](https://docs.github.com/en/apps/creating-github-apps/authenticating-with-a-github-app/making-authenticated-api-requests-with-a-github-app-in-a-github-actions-workflow)
+
 ## 🪝Tham khảo
 
 - [Ứng dụng giúp kiểm tra cú pháp của workflow](https://rhysd.github.io/actionlint/)
+- [VSCode Extension](https://marketplace.visualstudio.com/items?itemName=github.vscode-github-actions)

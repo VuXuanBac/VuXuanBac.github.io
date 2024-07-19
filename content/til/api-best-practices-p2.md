@@ -10,7 +10,7 @@
 
 ### ⚡ Vấn đề
 
-> 🐠 **Bạn gặp một số khó khăn và đang tìm kiếm một "công thức" cho việc thiết kế API cho ứng dụng của mình ?** 🥺
+> 🐠 **_Bạn gặp một số khó khăn và đang tìm kiếm một "công thức" cho việc thiết kế API cho ứng dụng của mình ?_** 🥺
 
 Giống như phần [API Design](./api-best-practices-p1.md), phần này tiếp nối những nội dung trong cuốn sách _"Build APIs You Won't Hate" - Phil Sturgeon_ [2015]
 
